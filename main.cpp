@@ -1,4 +1,4 @@
-#include <QCoreApplication>
+#include <QApplication>
 #include <QDir>
 #include <QVariantMap>
 #include <QVariantList>
@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication a(argc, argv);
+    QApplication app(argc, argv);
 
     PdfReport pdfReport(QDir::homePath()+"/report.pdf");
 
@@ -70,5 +70,5 @@ int main(int argc, char *argv[])
 
     qDebug()<<"Printou";
 
-    return a.exec();
+    return app.exec();
 }
